@@ -1,0 +1,6 @@
+[server]
+headless = true
+enableCORS = false
+
+[system]
+pythonVersion = "3.10"
