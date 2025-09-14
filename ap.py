@@ -16,7 +16,7 @@ def play_system_beep():
         else:
             os.system('echo -e "\\a"')
     except:
-        print("\a🚨 DROWSINESS ALERT! 🚨")
+        print("\a DROWSINESS ALERT! ")
 
 # Video Transformer Class for Drowsiness Detection
 class DrowsinessTransformer(VideoTransformerBase):
@@ -84,7 +84,7 @@ class DrowsinessTransformer(VideoTransformerBase):
         if not drowsiness_detected:
             self.reset_alarm()
 
-        alert_text = "🚨 DROWSINESS ALERT!" if self.alarm_on else "😊 Monitoring"
+        alert_text = " DROWSINESS ALERT!" if self.alarm_on else " Monitoring"
         alert_color = (0, 0, 255) if self.alarm_on else (0, 255, 0)
         cv2.putText(image, alert_text, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, alert_color, 3)
 
@@ -99,3 +99,4 @@ webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     async_processing=True
 )
+
